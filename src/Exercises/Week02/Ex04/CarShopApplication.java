@@ -9,7 +9,6 @@ public class CarShopApplication {
         seller.describe(car1);
         seller.describe(car2);
         seller.describe(car3);
-        System.out.println("three of them are particularly good.");
 
 
     }
