@@ -18,7 +18,7 @@ public class Toolbox {
         return tools;
     }
 
-    public void addtool(Tool tool) {
+    public void add(Tool tool) {
         tools.add(tool);
 
 

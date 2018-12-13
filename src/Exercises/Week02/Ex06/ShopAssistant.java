@@ -10,7 +10,7 @@ public class ShopAssistant {
 Toolbox toolbox=new Toolbox(color);
         for (String toolName : toolsName) {
             Tool tool=new Tool (toolName);
-            toolbox.addtool(tool);
+            toolbox.add(tool);
         }
     return toolbox;
     }
