@@ -7,7 +7,7 @@ public class Hansel {
 
         @Override
         public String drives() {
-            return "I love this " + getNextCar();
+            return "I love this " +  Car.getNextCar();
         }
 
 
