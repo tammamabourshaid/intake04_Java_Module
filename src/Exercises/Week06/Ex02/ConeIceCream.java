@@ -6,13 +6,13 @@ public class ConeIceCream extends IceCream {
         super(flavor, topping);
     }
 
-    @Override
-    public String eat() {
-        return null;
-    }
-
 //    @Override
 //    public String eat() {
-//        return "The " + getFlavor() + " ice-cream with " + getTopping() + " is licked";
+//        return null;
 //    }
+
+    @Override
+    public String eat() {
+       return "The " + getFlavor() + " ice-cream with " + getTopping() + " is licked";
+   }
 }
