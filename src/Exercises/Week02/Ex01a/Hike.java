@@ -1,5 +1,7 @@
 package Exercises.Week02.Ex01a;
 
+import Exercises.Week02.Ex01a.gatherer.Gatherer;
+
 import java.util.ArrayList;
 import java.util.List;
 

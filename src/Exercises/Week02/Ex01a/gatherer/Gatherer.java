@@ -1,10 +1,15 @@
-package Exercises.Week02.Ex01a;
+package Exercises.Week02.Ex01a.gatherer;
+
+import Exercises.Week02.Ex01a.Hiker;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Gatherer {
+    Scanner input = new Scanner(System.in);
+
+    private AutomaticGatherer automaticGatherer = new AutomaticGatherer();
 
     public List<Hiker> signUp() {
         List<Hiker> hikers = new ArrayList<>();
@@ -19,7 +24,6 @@ public class Gatherer {
     }
         private String askForName () {
             System.out.println("Write your Name: ");
-            Scanner input = new Scanner(System.in);
             return input.nextLine();
         }
     }
