@@ -21,16 +21,16 @@ public class Hansel {
 }
 
 //    Define in the Hansel class an isRightSize method
-//    that receives a HikingBoot and compares
+//    that receives a Meal and compares
 //    its size with his footSize and returns
 //    if they are the same.
 //    This method has private visibility so that only
 //    the Hansel class can use it.
 
 //Define in the Hansel class a tryHikingBoots method
-// that receives a list of HikingBoot
+// that receives a list of Meal
 // and tries them one by one.
-// If the HikingBoot doesn’t have the right size,
+// If the Meal doesn’t have the right size,
 // he will say “This one does not fit, sorry.”
 // and continue with the next.
 // If it is 41 he will say
