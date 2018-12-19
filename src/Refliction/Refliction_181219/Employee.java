@@ -4,12 +4,14 @@ public class Employee {
 
     private String name;
     private String department;
-    private String salary;
+    private Integer salary;
+    private String account;
 
-    public Employee(String name, String department, String salary) {
+    public Employee(String name, String department, Integer salary, String account) {
         this.name = name;
         this.department = department;
         this.salary = salary;
+        this.account = account;
     }
 
     public String getName() {
@@ -20,16 +22,13 @@ public class Employee {
         return department;
     }
 
-    public String getSalary() {
+    public Integer getSalary() {
         return salary;
     }
 
-
-    @Override
-    public String toString() {
-        return "{name : " + name +
-                " | department : " + department +
-                " | salary : " + salary +
-                '}';
+    public String getAccount() {
+        return account;
     }
 }
+
+
