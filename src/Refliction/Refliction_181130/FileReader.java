@@ -13,7 +13,7 @@ public class FileReader {
 
     @Override
     public String toString() {
-        return "FileReader{}";
+        return "FileReader11{}";
     }
 
     public FileReader() {

@@ -1,12 +1,12 @@
 //package Refliction.Refliction_181214;
 //
-//import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test01;
 //
 //import static org.junit.jupiter.api.Assertions.*;
 //
 //class CarTest {
 //
-//    @Test
+//    @Test01
 //    void AutomaticCarTest() {
 //
 //        String expectedAutomaticCarMessage = "Automatic Mercedes";
@@ -16,7 +16,7 @@
 //        Assertions.assertEquals(expectedAutomaticCarMessage, mercedes.drive());
 //    }
 //
-//    @Test
+//    @Test01
 //    void ManualCarTest() {
 //
 //        String expectedManualCarMessage = "Manual Audi";

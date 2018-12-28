@@ -4,8 +4,15 @@ import java.util.List;
 
 public class AverageCalculator {
 
-    public Double calculateAverage(List<Integer> steps){
+    private List<Integer> steps;
 
+    public Double calculateAverage(List<Integer> steps) {
+        this.steps = steps;
+        Integer sum = 0;
+        for (Integer step : steps) {
+            sum += step;
+        }
+        Double average = sum / new Double(steps.size());
         return average;
     }
 }
