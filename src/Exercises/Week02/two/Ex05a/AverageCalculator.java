@@ -12,7 +12,7 @@ public class AverageCalculator {
         for (Integer step : steps) {
             sum += step;
         }
-        Double average = sum / new Double(steps.size());
+        Double average = sum / (double) steps.size();
         return average;
     }
 }
