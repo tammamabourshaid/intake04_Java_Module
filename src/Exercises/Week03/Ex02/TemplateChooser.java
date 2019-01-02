@@ -17,16 +17,16 @@ public class TemplateChooser {
         return "default";
     }
 
-    private boolean TemplatePrivileged(Customer customer) {
-        return customer.getName().trim().contains("Hokopoko");
+    private boolean TemplateMan(Customer customer) {
+        return customer.getName().trim().startsWith("Mr.");
     }
 
     private boolean TemplateWoman(Customer customer) {
         return customer.getName().trim().startsWith("Ms.") || customer.getName().trim().startsWith("Mrs.");
     }
 
-    private boolean TemplateMan(Customer customer) {
-        return customer.getName().trim().startsWith("Mr.");
+    private boolean TemplatePrivileged(Customer customer) {
+        return customer.getName().trim().contains("Hokopoko");
     }
 
 }

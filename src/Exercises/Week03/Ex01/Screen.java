@@ -5,7 +5,7 @@ public class Screen {
         System.out.println(formatName(customer));
     }
 
-    private String formatName(Customer customer) {
+     String formatName(Customer customer) {
         if (customer.getCategory().equalsIgnoreCase("business")) {
             return customer.getName().toUpperCase();
         }
