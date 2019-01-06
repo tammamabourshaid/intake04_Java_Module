@@ -6,8 +6,6 @@ public class DoorApplication {
         Key key = new Key();
         key.open(door);
 
-
-
     }
 
 }
