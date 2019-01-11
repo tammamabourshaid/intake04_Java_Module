@@ -8,7 +8,7 @@ import java.util.function.Predicate;
 public class FormatList {
 
     public void FilterWords() {
-        List<String> words = Arrays.asList("somewhere", "scenario", "table", "cable", "glass", "backpack", "mouse");
+    List<String> words = Arrays.asList("somewhere", "scenario", "table", "cable", "glass", "backpack", "mouse");
         System.out.println(words);
 
         List<String> modified = new ArrayList<>(words);
