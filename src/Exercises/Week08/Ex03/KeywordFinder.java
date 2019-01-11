@@ -12,7 +12,7 @@ public class KeywordFinder {
         return finder(sentence, s->s.startsWith("ele"));
     }
 
-        public List<String> findPlayful(String sentence, Predicate<String> condition) {
+        public List<String> findPlayful(String sentence) {
 
 
         return finder(sentence, s->s.endsWith("ful"));
