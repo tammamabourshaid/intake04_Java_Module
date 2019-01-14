@@ -34,12 +34,15 @@ public class StreamsApplication {
                 .collect(Collectors.toList());
         System.out.println("Numbers smaller than 5 and multiplied by 3: " + smallerthanfive);
 
-        List<Integer> biggerThanAndSmaller = numbers.stream()
+        List<String> biggerThanAndSmaller = numbers.stream()
                 .filter(number -> number > 8 && number < 12)
+                .map(number-> number.toString())
+                .map(e-> "number " + e + " has " +e.length()+ " digit")
                 .collect(Collectors.toList());
+        System.out.println(biggerThanAndSmaller);
 
-        biggerThanAndSmaller.stream()
-                .forEach(number -> System.out.println("number " + number + " has " + String.valueOf(number).length() + " digits"));
+//        biggerThanAndSmaller
+//                .forEach(number -> System.out.println("number " + number + " has " + String.valueOf(number).length() + " digits"));
 
     }
 
