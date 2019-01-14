@@ -1,4 +1,4 @@
-package lecture.week9.robodog;
+package Exercises.Week09.Ex02;
 
 import java.io.IOException;
 import java.net.URI;
