@@ -1,6 +1,5 @@
 package Exercises.Week09.Ex02;
 
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,9 +8,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class StreamsTest {
-    private FileReader fileReader = new FileReader();
-    private List<String> getNames = fileReader.asList("Exercises/Week09/Ex02/names.txt");
 
+    private FileReader fileReader= new FileReader();
+    private List<String>getNames=fileReader.asList("Exercises/Week09/Ex02/names.txt");
 
     @Test
     void testShorterThanFour() {
@@ -25,7 +24,6 @@ public class StreamsTest {
 
 
     }
-
     @Test
     void testNamesEndwithM() {
         List<String> actual = getNames.stream()
@@ -64,5 +62,4 @@ public class StreamsTest {
         Assertions.assertEquals(actual,expected);
 
     }
-
 }
