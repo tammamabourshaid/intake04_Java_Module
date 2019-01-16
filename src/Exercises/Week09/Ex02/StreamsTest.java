@@ -10,11 +10,11 @@ import java.util.stream.Collectors;
 public class StreamsTest {
 
     private FileReader fileReader= new FileReader();
-    private List<String>getNames=fileReader.asList("Exercises/Week09/Ex02/names.txt");
+    private List<String> names =fileReader.asList("Exercises/Week09/Ex02/names.txt");
 
     @Test
     void testShorterThanFour() {
-        List<String> actual = getNames.stream()
+        List<String> actual = names.stream()
                 .filter(e -> e.length() < 4)
                 .collect(Collectors.toList());
 
@@ -26,7 +26,7 @@ public class StreamsTest {
     }
     @Test
     void testNamesEndwithM() {
-        List<String> actual = getNames.stream()
+        List<String> actual = names.stream()
                 .filter(e -> e.endsWith("m"))
                 .map(e -> e.toUpperCase())
                 .collect(Collectors.toList());
@@ -39,7 +39,7 @@ public class StreamsTest {
 
     @Test
     void containEandR() {
-        List<String> actual = getNames.stream()
+        List<String> actual = names.stream()
                 .filter(e -> e.contains("e") && e.contains("r"))
                 .collect(Collectors.toList());
         List<String> expected = Arrays.asList("Mehran", "Norbert", "Serife");
@@ -50,8 +50,7 @@ public class StreamsTest {
 
     @Test
     void manupilate (){
-        List<String> actual = getNames.stream()
-
+        List<String> actual = names.stream()
                 .filter(e->e.length()==4)
                 .map((e->e.toLowerCase()))
                 .filter(e->e.contains("a")&& e.contains("m"))

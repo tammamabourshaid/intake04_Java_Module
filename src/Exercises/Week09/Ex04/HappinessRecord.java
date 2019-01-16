@@ -1,9 +1,15 @@
 package Exercises.Week09.Ex04;
 
 public class HappinessRecord {
-    Integer Rank;
-    String Country;
-    Double Score;
+    private Integer Rank;
+    private String Country;
+    private Double Score;
+
+    public HappinessRecord(Integer rank, String country, Double score) {
+        Rank = rank;
+        Country = country;
+        Score = score;
+    }
 
     public Integer getRank() {
         return Rank;
@@ -16,15 +22,6 @@ public class HappinessRecord {
     public Double getScore() {
         return Score;
     }
-
-
-
-    public HappinessRecord(Integer rank, String country, Double score) {
-        Rank = rank;
-        Country = country;
-        Score = score;
-    }
-
 
 
 }
