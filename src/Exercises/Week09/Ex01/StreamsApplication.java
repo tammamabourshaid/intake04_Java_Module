@@ -42,7 +42,8 @@ public class StreamsApplication {
         System.out.println(biggerThanAndSmaller);
 
 //        biggerThanAndSmaller
-//                .forEach(number -> System.out.println("number " + number + " has " + String.valueOf(number).length() + " digits"));
+//                .forEach(number -> System.out.println("number " + number + " has "
+//                + String.valueOf(number).length() + " digits"));
 
     }
 
