@@ -34,10 +34,12 @@ public class MoreStreams {
 
             System.out.println("Which word appears the most:");
             Optional<String> mostAppeared = wordAppearances.entrySet().stream()
-                    .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
+                    //entrySet because it is a Map
+                    .sorted((e1,e2) -> e2.getValue().compareTo(e1.getValue()))
                     .map(e -> e.getKey() + " appears " + e.getValue() + " times")
                     .findFirst();
             if (mostAppeared.isPresent()) {
+                //because it is Optional "So we use isPresent
                 System.out.println("Most appearing word: " + mostAppeared.get());
             }
 
@@ -66,7 +68,7 @@ public class MoreStreams {
                     .collect(Collectors.groupingBy(e -> e.length(), Collectors.toList()));
             System.out.println("Word lengths:");
             wordLengths.entrySet().stream()
-                    .sorted((e1, e2) -> e1.getKey().compareTo(e2.getKey()))
+                    .sorted((e2, e1) -> e1.getKey().compareTo(e2.getKey()))
                     .map(e -> e.getKey() + " | " + e.getValue())
                     .forEach(e -> System.out.println(e));
 
