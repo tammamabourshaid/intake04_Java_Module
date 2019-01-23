@@ -72,8 +72,12 @@ public class StudentsPerformance {
                 " 95 in every topic");
         boolean some_high_school = studentsLists.stream()
                 .filter(e -> e.getParentalLevelOfEducation().equalsIgnoreCase("some high school"))
-                .anyMatch(e -> e.getMathScore() > 95 && e.getWritingScore() > 95 && e.getReadingScore() > 95);
+                .anyMatch(e -> getScoresHigherThan(e));
         System.out.println(some_high_school);
+    }
+
+    private static boolean getScoresHigherThan(StudentsList e) {
+        return e.getMathScore() > 95 && e.getWritingScore() > 95 && e.getReadingScore() > 95;
     }
 
     private static List<StudentsList> readStudentFile() {
