@@ -9,6 +9,10 @@ public class StudentsPerformance {
 
     private static List<StudentsList> studentsLists = readStudentFile();
 
+    private static List<StudentsList> readStudentFile() {
+        return new StudentsFile().getStudent();
+    }
+
     public static void main(String[] args) {
 
         parentEduLevApperance();
@@ -60,7 +64,7 @@ public class StudentsPerformance {
     private static void genderAndAvgScoresTopAvrg() {
         System.out.println("\nGenders and average scores of the top four average score students:");
         studentsLists.stream()
-                .map(e -> ((e.getReadingScore() + e.getMathScore() + e.getWritingScore()) / 3) + e.getGender())
+                .map(e -> ((e.getReadingScore() + e.getMathScore() + e.getWritingScore()) / 3)+" | " + e.getGender())
                 .sorted(Comparator.reverseOrder())
                 .limit(4)
 
@@ -78,10 +82,6 @@ public class StudentsPerformance {
 
     private static boolean getScoresHigherThan(StudentsList e) {
         return e.getMathScore() > 95 && e.getWritingScore() > 95 && e.getReadingScore() > 95;
-    }
-
-    private static List<StudentsList> readStudentFile() {
-        return new StudentsFile().getStudent();
     }
 
 
