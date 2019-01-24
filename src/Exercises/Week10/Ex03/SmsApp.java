@@ -1,5 +1,6 @@
 package Exercises.Week10.Ex03;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -9,6 +10,7 @@ public class SmsApp {
         sortedByHighestRatio();
         theMostWordUsedInHam();
         theMostLetterUsedInHam();
+        theLongestSpamMessage();
     }
 
     private static List<SmsList> smsLists() {
@@ -55,6 +57,27 @@ public class SmsApp {
                 .collect(Collectors.joining());
 
         System.out.println("\nMost used ham letter: " + theMostLetterUsed);
+
+    }
+
+    private static void theLongestSpamMessage() {
+        Integer longestSpamMessage = smsLists().stream()
+                .skip(1)
+                .filter(e -> e.getValueOne().contains("spam"))
+                .map(e->e.getValueTwo().length())
+                .sorted(Comparator.reverseOrder())
+                .findFirst().get();
+
+
+//                .sorted(Comparator.comparing(SmsList::getValueTwo).reversed())
+//                .collect(Collectors.groupingBy(e -> e.getValueTwo().length()))
+//                .entrySet().stream()
+//                .map(e->e.getValue())
+//                .count();
+
+
+        System.out.println("\nLongest spam message: " + longestSpamMessage);
+
 
     }
 }
