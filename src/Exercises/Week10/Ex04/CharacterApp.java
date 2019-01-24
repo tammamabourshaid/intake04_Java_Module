@@ -10,16 +10,14 @@ public class CharacterApp {
 
     public static void main(String[] args) {
 //How many characters appear in the books in total
-//        howManyCharactersAppearInTheBooksInTotal();
+        howManyCharactersAppearInTheBooksInTotal();
     }
 
-//    private static void howManyCharactersAppearInTheBooksInTotal() {
-//        chractersLists().stream()
-//.map((e->e.(getName()+ getAllegiances()).length())
-//                .collect(Collectors.toList())
-//                .forEach(e-> System.out.println(e));
-//
-//    }
+    private static void howManyCharactersAppearInTheBooksInTotal() {
+        long count = chractersLists().stream()
+                .count();
+        System.out.println(count);
+    }
 
 
 }
