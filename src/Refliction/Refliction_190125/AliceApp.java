@@ -13,10 +13,10 @@ public class AliceApp {
 
     public static void main(String[] args) {
         FileReader fileReader = new FileReader();
-        List<String> alice = fileReader.asList("Refliction/Refliction_190125/alice.txt");
+        Stream<String> alice = fileReader.asStream("Refliction/Refliction_190125/alice.txt");
 
 
-        List<String> collect = alice.stream()
+        List<String> collect = alice
                 .map(e -> e.replaceAll(",", ""))
                 .map(e -> e.replaceAll(";", ""))
                 .map(e -> e.replaceAll("’s", ""))
