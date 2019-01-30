@@ -5,8 +5,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class toMilitaryTime {
-//    Write the method ​ toMilitaryTime ​ , that receives a String representing a time in 12-hour format
+public class toMilitaryTimeSimple {
+//    Write the method ​ toMilitaryTimeSimple ​ , that receives a String representing a time in 12-hour format
 //    and returns a String representing that time in 24-hour format. Have in mind that
 //    midnight is 12:00:00 AM on a 12-hour clock, and 00:00:00 on a 24-hour clock. Also that noon
 //    is 12:00:00 PM on a 12-hour clock, and 12:00:00 on a 24-hour clock.
