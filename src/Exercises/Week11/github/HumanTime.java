@@ -21,7 +21,7 @@ public class HumanTime {
         LocalTime time = LocalTime.now();
         System.out.println("Time: " + time);
         LocalTime someTime = LocalTime.parse("13:37:33");
-        System.out.println("Some time: " + someTime);
+        System.out.println("Some MilitaryTimeToOrdinary: " + someTime);
         System.out.println("Hours: " + someTime.getHour());
         System.out.println("Minutes: " + someTime.getMinute());
         System.out.println("Seconds: " + someTime.getSecond());

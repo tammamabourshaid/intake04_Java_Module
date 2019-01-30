@@ -12,7 +12,7 @@ class DisplayTimeTableTest {
 
     @Test
     void displayTimeAndDate() {
-//        He wakes up and stops his alarm. What time is it displayed in
+//        He wakes up and stops his alarm. What MilitaryTimeToOrdinary is it displayed in
 //        the format Hours:Minutes? What day of the week is this?
         LocalDate dayOfStart = LocalDate.of(2003, 03, 13);
         LocalTime timeOfStart = LocalTime.parse("10:00");
@@ -32,7 +32,7 @@ class DisplayTimeTableTest {
         Assertions.assertEquals(expectedDate, dayOfWeek);
 
 //        It takes him 37 minutes and 21 seconds to get ready to be picked up by the limousine.
-//        What time is it displayed in the format Hours:Minutes:Seconds?
+//        What MilitaryTimeToOrdinary is it displayed in the format Hours:Minutes:Seconds?
         LocalTime addMinutesandSeconds = timeOfStart.plusMinutes(37).plusSeconds(21);
         DateTimeFormatter formatterWithSeconds = DateTimeFormatter.ofPattern("HH:mm:ss");
         String format = addMinutesandSeconds.format(formatterWithSeconds);
@@ -43,7 +43,7 @@ class DisplayTimeTableTest {
         Assertions.assertEquals(expectedtime, addMinutesandSeconds);
 
 //        The limousine arrives at the airport one and a half hours later because of
-//        traffic jam. At what time do they arrive at the airport?
+//        traffic jam. At what MilitaryTimeToOrdinary do they arrive at the airport?
         LocalTime addOneandHalfour = addMinutesandSeconds.plusHours(1).plusMinutes(30);
         LocalDateTime dateTime = LocalDateTime.of(dayOfStart, addOneandHalfour);
         System.out.println("\nTime do they arrive at the airport: " + dateTime);
@@ -52,8 +52,8 @@ class DisplayTimeTableTest {
         LocalTime expectedTimeAdded = LocalTime.parse("12:07:21");
         Assertions.assertEquals(expectedTimeAdded, addOneandHalfour);
 
-//        Mugatu checks the departure time of his flight and it says 11:04 am.
-//        Is this time before the current one? Did he miss his flight?
+//        Mugatu checks the departure MilitaryTimeToOrdinary of his flight and it says 11:04 am.
+//        Is this MilitaryTimeToOrdinary before the current one? Did he miss his flight?
         LocalTime airportTime = LocalTime.parse("11:04:00");
         boolean missTheFlight = addOneandHalfour.isAfter(airportTime);
         System.out.println("\nDid he miss the Flight: " + missTheFlight);
@@ -71,7 +71,7 @@ class DisplayTimeTableTest {
 
 //        He finally gets in the plane and departs at 18:45 from London.
 //        It takes him 11 hours and 50 minutes to land in
-//        Tokyo. What time is it in London? What date and time is it in Tokyo?
+//        Tokyo. What MilitaryTimeToOrdinary is it in London? What date and MilitaryTimeToOrdinary is it in Tokyo?
 
         LocalDateTime timeInLondon = LocalDateTime.of(2003, 03, 13, 18, 45);
         LocalDateTime arrivalToTokyo = timeInLondon.plusHours(11).plusMinutes(50);
@@ -80,20 +80,20 @@ class DisplayTimeTableTest {
 
         ZoneId zoneLondon = ZoneId.of("Europe/London");
         ZonedDateTime arrivalLondonTime = arrivalToTokyo.atZone(zoneLondon);
-        System.out.println("\nArrival in London time: " + arrivalLondonTime);
+        System.out.println("\nArrival in London MilitaryTimeToOrdinary: " + arrivalLondonTime);
 
 
         ZoneId zoneTokyo = ZoneId.of("Asia/Tokyo");
         ZonedDateTime arrivalTokyoTime = arrivalLondonTime.withZoneSameInstant(zoneTokyo);
-        System.out.println("\nArrival in Tokyo time: " + arrivalTokyoTime);
+        System.out.println("\nArrival in Tokyo MilitaryTimeToOrdinary: " + arrivalTokyoTime);
 
 //     After two hours he manages to arrive to his hotel in Tokyo and sleeps for 9 hours straight until
-//     he wakes up abruptly. At what time is his manager hitting him in the
+//     he wakes up abruptly. At what MilitaryTimeToOrdinary is his manager hitting him in the
 //     head with the pillows to wake him up?
 //
         LocalDateTime timeInTokyo = arrivalTokyoTime.toLocalDateTime();
         LocalDateTime arrivingToHotel = timeInTokyo.plusHours(11);
-        System.out.println("\nWhat time is his manager wake him up: " + arrivingToHotel);
+        System.out.println("\nWhat MilitaryTimeToOrdinary is his manager wake him up: " + arrivingToHotel);
 
 //        They tell him that the advertisement shooting starts in 47 minutes. When is that exactly?
 
@@ -101,14 +101,14 @@ class DisplayTimeTableTest {
         System.out.println("\nadvertisement shooting starts: " + advertiseStart);
 
 //        They throw him with his clothes and make up set into the limousine and rush towards the studio arriving just
-//        in time. However, Mugatu received a private phone call from his assistant Katinka that lasted 546 seconds.
-//                How much time in minutes and seconds did Mugatu have to get prepared in the limousine?
+//        in MilitaryTimeToOrdinary. However, Mugatu received a private phone call from his assistant Katinka that lasted 546 seconds.
+//                How much MilitaryTimeToOrdinary in minutes and seconds did Mugatu have to get prepared in the limousine?
 
         LocalDateTime plusSeconds = advertiseStart.minusSeconds(546);
         Duration betweenAdvAndPlus = Duration.between(advertiseStart, plusSeconds);
         System.out.println("\nTime Mugatu have to get prepared in the limousine: " + betweenAdvAndPlus);
 
-//        After 7 hours the shooting is over. Lunch time is round 13:00 and dinner time is around 20:00. Should
+//        After 7 hours the shooting is over. Lunch MilitaryTimeToOrdinary is round 13:00 and dinner MilitaryTimeToOrdinary is around 20:00. Should
 //        Mugatu have lunch or dinner?
 
         LocalDateTime afterShootingOver = plusSeconds.plusHours(7);
@@ -137,7 +137,7 @@ class DisplayTimeTableTest {
 
 
 //        After three days and 12 hours, Mugatu finally takes his flight back to London. After the 11 hours and 50
-//        minutes of flight back, he lands in London. What time is it in Tokyo? What date is it in London?
+//        minutes of flight back, he lands in London. What MilitaryTimeToOrdinary is it in Tokyo? What date is it in London?
 
         LocalDateTime backToLondon = afterShootingOver.plusDays(3).plusHours(23).plusMinutes(50);
         System.out.println("\nTime Back in London: " + backToLondon);
@@ -153,7 +153,7 @@ class DisplayTimeTableTest {
 
         LocalTime time = LocalTime.ofSecondOfDay((173 * 12));
 
-        System.out.println("\nFans dispatching time: " + time);
+        System.out.println("\nFans dispatching MilitaryTimeToOrdinary: " + time);
         System.out.println("Hours: " + time.getHour());
         System.out.println("Minutes: " + time.getMinute());
         System.out.println("Seconds: " + time.getSecond());
@@ -202,7 +202,7 @@ class DisplayTimeTableTest {
             System.out.println("\nMugatu Can have a Massage");
         } else System.out.println("\nMugatu Can not have a Massage");
 
-//        One week later, the advertisement is broadcasted at 18:30 in Tokyo’s time.
+//        One week later, the advertisement is broadcasted at 18:30 in Tokyo’s MilitaryTimeToOrdinary.
 //        When does Mugatu have to turn on the TV in London to be able to see it?
 
         LocalDateTime dateafterOneWeek = timereachToHotel.plusWeeks(1);
@@ -218,7 +218,7 @@ class DisplayTimeTableTest {
 
 //        The advertisement lasts 29 seconds. Fifteen seconds afterwards his manager calls
 //        him on the phone to congratulate him for his popularity increase.
-//        At what time exactly does this happen? What day of the week is this?
+//        At what MilitaryTimeToOrdinary exactly does this happen? What day of the week is this?
 
         LocalDateTime timeAfterSeenAdvertiseAndCall = advertiseBroadcastInLondon.plusSeconds(29).plusSeconds(15);
         DayOfWeek dayOfWeekManagerCall = DayOfWeek.from(timeAfterSeenAdvertiseAndCall);
@@ -228,10 +228,10 @@ class DisplayTimeTableTest {
 //        How many days have passed by since he woke up at the beginning of the timetable?
         LocalDate dateAtFinish = dateafterOneWeek.toLocalDate();
         Period periodBetweenBeginAndEnd = Period.between(dayOfStart, dateAtFinish);
-        System.out.println("\nThe Period time between: " + periodBetweenBeginAndEnd);
+        System.out.println("\nThe Period MilitaryTimeToOrdinary between: " + periodBetweenBeginAndEnd);
 
 //    Mugatu gets paid for the timetable rights 1.39 Euro per minute of his privacy
-//   since the beginning of the timetable until the end, except for the time
+//   since the beginning of the timetable until the end, except for the MilitaryTimeToOrdinary
 //  of the private call that Mugatu had with Katinka. How much is he paid for this reportage?
         int howManyDays = periodBetweenBeginAndEnd.getDays();
         double totalPaid = (howManyDays * 24 * 60 * 1.39);
