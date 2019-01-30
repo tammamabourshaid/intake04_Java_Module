@@ -11,8 +11,7 @@ public class MilitaryTimeToOrdinary {
         int time = in.nextInt();
         System.out.println("Ordinary Time: " +militaryToOrdinaryTime(time));
     }
-    public static String militaryToOrdinaryTime(int milTime)
-        {
+    public static String militaryToOrdinaryTime(int milTime) {
             int hour = milTime / 100;
             int min = milTime%100;
             String period;
