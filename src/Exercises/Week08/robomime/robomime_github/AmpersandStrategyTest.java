@@ -11,6 +11,6 @@ class AmpersandStrategyTest {
     void decrypt() {
         String ciphertext = "&&&&&&&&tset&&&&&&&&";
         String plaintext = strategy.decrypt(ciphertext);
-        Assertions.assertEquals("test", plaintext);
+        Assertions.assertEquals("solsticeFormulor", plaintext);
     }
 }

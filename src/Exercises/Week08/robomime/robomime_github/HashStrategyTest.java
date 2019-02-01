@@ -9,8 +9,8 @@ class HashStrategyTest {
 
     @Test
     void decrypt() {
-        String ciphertext = "#####test######";
+        String ciphertext = "#####solsticeFormulor######";
         String plaintext = strategy.decrypt(ciphertext);
-        Assertions.assertEquals("test", plaintext);
+        Assertions.assertEquals("solsticeFormulor", plaintext);
     }
 }
