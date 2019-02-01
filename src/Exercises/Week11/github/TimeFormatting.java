@@ -9,7 +9,7 @@ public class TimeFormatting {
         System.out.println("---TIME FORMATTING");
         LocalDateTime now = LocalDateTime.now();
         System.out.println("Now in standard formatting: " + now);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH|mm|ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH|mm|ss a");
         String formatted = now.format(formatter);
         System.out.println("Now formatted: " + formatted);
     }
