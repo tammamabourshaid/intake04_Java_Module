@@ -5,10 +5,9 @@ import java.time.Period;
 
 public class Solstices {
 
-
     public String getSummerSolsticeCountdown(String countdownMessage) {
 
-         LocalDate inputdate = LocalDate.parse("2019-02-01");
+        LocalDate inputdate = LocalDate.parse("2019-02-01");
 
 
         LocalDate firstdate = LocalDate.parse("2019-06-21");
