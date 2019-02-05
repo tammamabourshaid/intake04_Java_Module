@@ -9,19 +9,20 @@ public class SimplifyDirections {
         List<String> directions = Arrays.asList("NORTH", "EAST", "WEST", "SOUTH", "SOUTH", "WEST");
         System.out.println(deletOppositeDirections(directions));
     }
-    static   public List<String> deletOppositeDirections(List<String> directions) {
-        String direction = directions.stream().map(e->e+",").collect(Collectors.joining());
+
+    private static List<String> deletOppositeDirections(List<String> directions) {
+        String direction = directions.stream().map(e -> e + ",").collect(Collectors.joining());
         Integer directionLength = direction.length();
-        while (directionLength!=getLeftDirections(direction).length()){
-            direction=  getLeftDirections(direction);
+        while (directionLength != getLeftDirections(direction).length()) {
+            direction = getLeftDirections(direction);
             directionLength = direction.length();
         }
-        List<String>finalDirectionsList=Arrays.asList(direction.split(","))
-                ;
-        return finalDirectionsList ;
+        List<String> finalDirectionsList = Arrays.asList(direction.split(","));
+        return finalDirectionsList;
     }
-    static private String getLeftDirections(String direction) {
-        String finalDirection=    direction.replaceAll("NORTH,SOUTH,", "").replaceAll("SOUTH,NORTH,", "")
+
+    private static String getLeftDirections(String direction) {
+        String finalDirection = direction.replaceAll("NORTH,SOUTH,", "").replaceAll("SOUTH,NORTH,", "")
                 .replaceAll("EAST,WEST,", "").replaceAll("WEST,EAST,", "");
         return finalDirection;
     }
