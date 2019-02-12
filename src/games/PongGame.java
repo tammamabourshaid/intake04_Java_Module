@@ -17,8 +17,6 @@ import java.util.Random;
 
 
 public class PongGame extends Application {
-
-
     public static void main(String[] args) {
         launch(args);
     }
