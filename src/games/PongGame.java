@@ -18,21 +18,27 @@ import java.util.Random;
 
 public class PongGame extends Application {
 
-        private static final int width = 800;
-        private static final int height = 600;
-        private static final int PLAYER_HEIGHT = 100;
-        private static final int PLAYER_WIDTH = 15;
-        private static final double BALL_R = 15;
-        private int ballYSpeed = 1;
-        private int ballXSpeed = 1;
-        private double playerOneYPos = height / 2;
-        private double playerTwoYPos = height / 2;
-        private double ballXPos = width / 2;
-        private double ballYPos = height / 2;
-        private int scoreP1 = 0;
-        private int scoreP2 = 0;
-        private boolean gameStarted;
-        private int playerOneXPos = 0;
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    private static final int width = 800;
+    private static final int height = 600;
+    private static final int PLAYER_HEIGHT = 100;
+    private static final int PLAYER_WIDTH = 15;
+    private static final double BALL_R = 15;
+    private int ballYSpeed = 1;
+    private int ballXSpeed = 1;
+    private double playerOneYPos = height / 2;
+    private double playerTwoYPos = height / 2;
+    private double ballXPos = width / 2;
+    private double ballYPos = height / 2;
+    private int scoreP1 = 0;
+    private int scoreP2 = 0;
+    private boolean gameStarted;
+    private int playerOneXPos = 0;
+
         private double playerTwoXPos = width - PLAYER_WIDTH;
 
         public void start(Stage stage) throws Exception {
@@ -93,9 +99,5 @@ public class PongGame extends Application {
 
         }
 
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 
 }
