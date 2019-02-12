@@ -1,4 +1,4 @@
-package Refliction_181130;
+package Refliction.Refliction_181130;
 
 import java.io.IOException;
 import java.net.URI;
@@ -13,7 +13,7 @@ public class FileReader {
 
     @Override
     public String toString() {
-        return "FileReader11{}";
+        return "FileReader";
     }
 
     public FileReader() {

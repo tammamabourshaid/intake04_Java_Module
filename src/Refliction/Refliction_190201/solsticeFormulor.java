@@ -90,10 +90,7 @@ public class solsticeFormulor {
         public String toString() {
             return String.valueOf(year + " | " + month + " | " + day);
         }
-
-
     }
-
 }
 
 
