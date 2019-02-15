@@ -18,7 +18,6 @@ public class MoreStreams {
             // noneMatch
             // anyMatch
             // allMatch
-
             // collect to words
             List<String> words = Stream.of(quote.split(" "))
                     .map(e -> e.replaceAll(",", ""))
@@ -42,7 +41,6 @@ public class MoreStreams {
                 //because it is Optional "So we use isPresent
                 System.out.println("Most appearing word: " + mostAppeared.get());
             }
-
 
             // find out the most appearing three letters
             List<String> mostAppearingThreeLetters = words.stream()
@@ -97,7 +95,6 @@ public class MoreStreams {
             words.stream()
                     .filter(hasAtLeastTwoEs())
                     .forEach(word -> System.out.println(word));
-
         }
 
         private static Predicate<String> hasAtLeastTwoEs() {
