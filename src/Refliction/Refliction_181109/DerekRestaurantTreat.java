@@ -1,4 +1,4 @@
-package Refliction_181109;
+package Refliction.Refliction_181109;
 
 import java.util.Scanner;
 
